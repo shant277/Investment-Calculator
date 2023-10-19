@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import UserInput from "./components/UserInput/UserInput";
 import ResultsTable from "./components/ResultsTable/ResultsTable";
 
+
 function App() {
   const [userInput, setUserInput] = useState(null);
 
@@ -36,7 +37,7 @@ function App() {
     <div>
       <Header />
       <UserInput onCalculate={calculateHandler} />
-      {!userInput && <p>No investment calculated yet.</p>}
+      {!userInput && <p style={{textAlign: 'center'}}>No investment calculated yet.</p>}
       {userInput && (
         <ResultsTable
           data={yearlyData}
